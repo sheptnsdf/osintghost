@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anomaly - OSINT Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>🔍 Anomaly</h1>
+                <span class="subtitle">Advanced OSINT Intelligence Tool</span>
+            </div>
+            <div class="header-actions">
+                <span class="online-status">🟢 Online</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Sidebar Navigation -->
+            <aside class="sidebar left-sidebar">
+                <div class="nav-header">
+                    <div class="nav-logo">🔍</div>
+                    <h3>Навигация</h3>
+                </div>
+                
+                <nav class="main-navigation">
+                    <!-- Main Sections -->
+                    <button class="nav-btn active" data-section="about">
+                        <div class="nav-icon">🌟</div>
+                        <span>О проекте</span>
+                        <div class="nav-indicator"></div>
+                    </button>
+                    
+                    <button class="nav-btn" data-section="tools">
+                        <div class="nav-icon">🛠️</div>
+                        <span>Инструменты</span>
+                        <div class="nav-indicator"></div>
+                    </button>
+                    
+                    <button class="nav-btn" data-section="neural">
+                        <div class="nav-icon">🤖</div>
+                        <span>ИИ-Ассистент</span>
+                        <div class="nav-indicator"></div>
+                    </button>
+                    
+                    <button class="nav-btn" data-section="framework">
+                        <div class="nav-icon">🌐</div>
+                        <span>OSINT Ресурсы</span>
+                        <div class="nav-indicator"></div>
+                    </button>
+                    
+                    <button class="nav-btn" data-section="settings">
+                        <div class="nav-icon">⚙️</div>
+                        <span>Настройки</span>
+                        <div class="nav-indicator"></div>
+                    </button>
+                </nav>
+                
+                <!-- Theme Switcher -->
+                <div class="nav-footer">
+                    <div class="theme-section">
+                        <h4>🎨 Тема</h4>
+                        <div class="theme-buttons">
+                            <button class="theme-btn red" data-theme="red" title="Красная тема"></button>
+                            <button class="theme-btn pink" data-theme="pink" title="Розовая тема"></button>
+                            <button class="theme-btn blue" data-theme="blue" title="Синяя тема"></button>
+                            <button class="theme-btn green" data-theme="green" title="Зелёная тема"></button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="content-area">
+                <!-- About Section -->
+                <section id="about-section" class="content-section active">
+                    <div class="section-header">
+                        <div class="section-icon">🌟</div>
+                        <h2>О проекте Anomaly</h2>
+                        <p class="section-subtitle">Современная OSINT платформа нового поколения</p>
+                    </div>
+                    
+                    <div class="info-cards">
+                        <!-- Platform Info -->
+                        <div class="info-card about-card">
+                            <div class="card-header">
+                                <div class="card-icon">🌟</div>
+                                <h3>О платформе</h3>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Anomaly</strong> — это коммерческая OSINT платформа, созданная с любовью для сообщества исследователей и аналитиков.</p>
+                                <p>Платформа объединяет множественные инструменты, аналитику с современными ИИ-технологиями для получения максимально точных результатов.</p>
+                                
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🔍</span>
+                                        <span>ИИ-ассистент — для быстрого анализа</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon">🎯</span>
+                                        <span>DeepScan — для глубокого обучения</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Creators Section -->
+                        <div class="info-card creators-card">
+                            <div class="card-header">
+                                <div class="card-icon">👥</div>
+                                <h3>Создатели</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="creator-item">
+                                    <div class="creator-avatar">⭐</div>
+                                    <div class="creator-info">
+                                        <h4>Amalya</h4>
+                                        <p>Основатель и главный разработчик</p>
+                                    </div>
+                                </div>
+                                <div class="creator-item">
+                                    <div class="creator-avatar">🧠</div>
+                                    <div class="creator-info">
+                                        <h4>шёпот</h4>
+                                        <p>Со-создатель и архитектор</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Official Adapters -->
+                        <div class="info-card adapters-card">
+                            <div class="card-header">
+                                <div class="card-icon">💎</div>
+                                <h3>Официальные адаптеры</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="adapter-grid">
+                                    <div class="adapter-card amalya-adapter">
+                                        <div class="adapter-icon">💜</div>
+                                        <div class="adapter-info">
+                                            <h4>Адаптер Amalya</h4>
+                                            <p>Связанный с основным разработчиком. Персональный помощник</p>
+                                            <a href="https://t.me/adapetamaly" target="_blank" class="adapter-link">t.me/adapetamaly</a>
+                                        </div>
+                                    </div>
+                                    <div class="adapter-card shepot-adapter">
+                                        <div class="adapter-icon">🧡</div>
+                                        <div class="adapter-info">
+                                            <h4>Адаптер шёпота</h4>
+                                            <p>Ваш лучший спутник. Ключевой ментор разработки</p>
+                                            <a href="https://t.me/adp_oxaul" target="_blank" class="adapter-link">t.me/adp_oxaul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Platform Capabilities -->
+                        <div class="info-card capabilities-card">
+                            <div class="card-header">
+                                <div class="card-icon">⚡</div>
+                                <h3>Возможности платформы</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="capability-grid">
+                                    <div class="capability-item phone-analysis">
+                                        <div class="capability-icon">📱</div>
+                                        <h4>Анализ телефонов</h4>
+                                        <p>Поиск информации и корреляция базиков выдачи</p>
+                                    </div>
+                                    <div class="capability-item ip-geo">
+                                        <div class="capability-icon">🌐</div>
+                                        <h4>IP геолокация</h4>
+                                        <p>Исследования и анализ геоданных</p>
+                                    </div>
+                                    <div class="capability-item social-search">
+                                        <div class="capability-icon">🔍</div>
+                                        <h4>Поиск в соцсетях</h4>
+                                        <p>Поиск информации на всех популярных соц-сетях</p>
+                                    </div>
+                                    <div class="capability-item media-analysis">
+                                        <div class="capability-icon">📷</div>
+                                        <h4>Анализ медиа</h4>
+                                        <p>Получение и исследование скрытых данных файлов</p>
+                                    </div>
+                                    <div class="capability-item ai-assistant">
+                                        <div class="capability-icon">🤖</div>
+                                        <h4>ИИ ассистент</h4>
+                                        <p>Помощь в анализе и принятии решений через диалог</p>
+                                    </div>
+                                    <div class="capability-item external-tools">
+                                        <div class="capability-icon">🛠️</div>
+                                        <h4>Внешние инструменты</h4>
+                                        <p>Интеграция многочисленных проверенных инструментов</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tools Section -->
+                <section id="tools-section" class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">🛠️</div>
+                        <h2>OSINT Инструменты</h2>
+                        <p class="section-subtitle">Профессиональные инструменты для анализа данных</p>
+                    </div>
+                    
+                    <div class="tools-grid">
+                        <!-- Phone Lookup -->
+                        <div class="tool-card">
+                            <div class="tool-header">
+                                <div class="tool-icon">📱</div>
+                                <h3>Пробив номеров</h3>
+                                <p>Анализ российских номеров телефонов</p>
+                            </div>
+                            <div class="tool-form">
+                                <input type="text" id="phone-input" placeholder="+7 XXX XXX XX XX">
+                                <button onclick="phoneSearch()" class="tool-btn">🔍 Поиск</button>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Analysis -->
+                        <div class="tool-card">
+                            <div class="tool-header">
+                                <div class="tool-icon">📱</div>
+                                <h3>Анализ соцсетей</h3>
+                                <p>Поиск профилей в социальных сетях</p>
+                            </div>
+                            <div class="tool-form">
+                                <select id="social-platform">
+                                    <option value="vk">ВКонтакте</option>
+                                    <option value="telegram">Telegram</option>
+                                    <option value="instagram">Instagram</option>
+                                    <option value="facebook">Facebook</option>
+                                </select>
+                                <input type="text" id="social-username" placeholder="Имя пользователя">
+                                <button onclick="socialAnalysis()" class="tool-btn">🔍 Анализ</button>
+                            </div>
+                        </div>
+
+                        <!-- Metadata Analysis -->
+                        <div class="tool-card">
+                            <div class="tool-header">
+                                <div class="tool-icon">📄</div>
+                                <h3>Анализ метаданных</h3>
+                                <p>Извлечение скрытых данных из файлов</p>
+                            </div>
+                            <div class="tool-form">
+                                <input type="file" id="metadata-file" accept="image/*,.pdf,.doc,.docx">
+                                <button onclick="metadataAnalysis()" class="tool-btn">📊 Анализировать</button>
+                            </div>
+                        </div>
+
+                        <!-- Geolocation -->
+                        <div class="tool-card">
+                            <div class="tool-header">
+                                <div class="tool-icon">🌍</div>
+                                <h3>Геолокация</h3>
+                                <p>Поиск местоположения по адресу или IP</p>
+                            </div>
+                            <div class="tool-form">
+                                <input type="text" id="geo-query" placeholder="Адрес, координаты или IP">
+                                <button onclick="geoSearch()" class="tool-btn">🌍 Поиск</button>
+                            </div>
+                        </div>
+
+                        <!-- Document Verification -->
+                        <div class="tool-card">
+                            <div class="tool-header">
+                                <div class="tool-icon">📋</div>
+                                <h3>Проверка документов</h3>
+                                <p>Валидация российских документов</p>
+                            </div>
+                            <div class="tool-form">
+                                <select id="doc-type">
+                                    <option value="passport">Паспорт РФ</option>
+                                    <option value="inn">ИНН</option>
+                                    <option value="snils">СНИЛС</option>
+                                    <option value="oms">ОМС</option>
+                                </select>
+                                <input type="text" id="doc-number" placeholder="Номер документа">
+                                <button onclick="documentVerify()" class="tool-btn">✅ Проверить</button>
+                            </div>
+                        </div>
+
+                        <!-- Database Search -->
+                        <div class="tool-card">
+                            <div class="tool-header">
+                                <div class="tool-icon">🗃️</div>
+                                <h3>Поиск в базах</h3>
+                                <p>Поиск в загруженных базах данных</p>
+                            </div>
+                            <div class="tool-form">
+                                <input type="text" id="database-query" placeholder="Запрос для поиска">
+                                <button onclick="databaseSearch()" class="tool-btn">🗃️ Поиск</button>
+                                <div class="db-info">
+                                    <small>💡 Загрузите базу данных в настройках для работы</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Neural Assistant Section -->
+                <section id="neural-section" class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">🤖</div>
+                        <h2>ИИ-Ассистент "Крис"</h2>
+                        <p class="section-subtitle">Умный помощник для OSINT исследований</p>
+                    </div>
+                    
+                    <div class="neural-container">
+                        <div class="neural-chat">
+                            <div id="chat-messages" class="chat-messages">
+                                <div class="assistant-message">
+                                    <div class="message-avatar">🤖</div>
+                                    <div class="message-content">
+                                        Привет! Я Крис, ваш OSINT ассистент. Готов помочь с анализом данных и выбором инструментов!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-input">
+                                <input type="text" id="chat-input" placeholder="Задайте вопрос Крису...">
+                                <button id="send-chat">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- OSINT Framework Section -->
+                <section id="framework-section" class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">🌐</div>
+                        <h2>OSINT Ресурсы</h2>
+                        <p class="section-subtitle">Коллекция полезных инструментов и ресурсов</p>
+                    </div>
+                    
+                    <div class="framework-grid">
+                        <div class="framework-category">
+                            <h3>🔍 Поисковые системы</h3>
+                            <div class="framework-links">
+                                <a href="https://google.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">🌍</span>
+                                    <span>Google</span>
+                                </a>
+                                <a href="https://yandex.ru" target="_blank" class="framework-link">
+                                    <span class="link-icon">🇷🇺</span>
+                                    <span>Yandex</span>
+                                </a>
+                                <a href="https://duckduckgo.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">🦆</span>
+                                    <span>DuckDuckGo</span>
+                                </a>
+                                <a href="https://search.yahoo.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">💜</span>
+                                    <span>Yahoo</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="framework-category">
+                            <h3>📱 Социальные сети</h3>
+                            <div class="framework-links">
+                                <a href="https://vk.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">🔵</span>
+                                    <span>VKontakte</span>
+                                </a>
+                                <a href="https://facebook.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">📘</span>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="https://instagram.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">📷</span>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">🐦</span>
+                                    <span>Twitter</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="framework-category">
+                            <h3>🛠️ Специализированные</h3>
+                            <div class="framework-links">
+                                <a href="https://pipl.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">👤</span>
+                                    <span>Pipl</span>
+                                </a>
+                                <a href="https://hunter.io" target="_blank" class="framework-link">
+                                    <span class="link-icon">📧</span>
+                                    <span>Hunter.io</span>
+                                </a>
+                                <a href="https://shodan.io" target="_blank" class="framework-link">
+                                    <span class="link-icon">🔍</span>
+                                    <span>Shodan</span>
+                                </a>
+                                <a href="https://censys.io" target="_blank" class="framework-link">
+                                    <span class="link-icon">🌐</span>
+                                    <span>Censys</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="framework-category">
+                            <h3>🌍 Геолокация</h3>
+                            <div class="framework-links">
+                                <a href="https://maps.google.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">🗺️</span>
+                                    <span>Google Maps</span>
+                                </a>
+                                <a href="https://yandex.ru/maps" target="_blank" class="framework-link">
+                                    <span class="link-icon">🗺️</span>
+                                    <span>Yandex Maps</span>
+                                </a>
+                                <a href="https://openstreetmap.org" target="_blank" class="framework-link">
+                                    <span class="link-icon">🌍</span>
+                                    <span>OpenStreetMap</span>
+                                </a>
+                                <a href="https://earth.google.com" target="_blank" class="framework-link">
+                                    <span class="link-icon">🌎</span>
+                                    <span>Google Earth</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settings-section" class="content-section">
+                    <div class="section-header">
+                        <div class="section-icon">⚙️</div>
+                        <h2>Настройки</h2>
+                        <p class="section-subtitle">Персонализация интерфейса и настройки поиска</p>
+                    </div>
+                    
+                    <div class="settings-grid">
+                        <div class="settings-card">
+                            <div class="settings-header">
+                                <h3>🎨 Темы интерфейса</h3>
+                                <p>Выберите цветовую схему</p>
+                            </div>
+                            <div class="theme-buttons-large">
+                                <button class="theme-btn-large red active" data-theme="red">
+                                    <span class="theme-color"></span>
+                                    <span>Красная</span>
+                                </button>
+                                <button class="theme-btn-large pink" data-theme="pink">
+                                    <span class="theme-color"></span>
+                                    <span>Розовая</span>
+                                </button>
+                                <button class="theme-btn-large blue" data-theme="blue">
+                                    <span class="theme-color"></span>
+                                    <span>Синяя</span>
+                                </button>
+                                <button class="theme-btn-large green" data-theme="green">
+                                    <span class="theme-color"></span>
+                                    <span>Зелёная</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-card">
+                            <div class="settings-header">
+                                <h3>🔍 Настройки поиска</h3>
+                                <p>Конфигурация источников данных</p>
+                            </div>
+                            <div class="setting-item">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Поиск в интернете</span>
+                            </div>
+                            <div class="setting-item">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Поиск в базах данных</span>
+                            </div>
+                            <div class="setting-item">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Глубокий анализ</span>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-card">
+                            <div class="settings-header">
+                                <h3>🗃️ Управление базами</h3>
+                                <p>Загрузка и управление базами данных</p>
+                            </div>
+                            <div class="database-upload">
+                                <input type="file" id="database-file" accept=".json,.csv,.txt" multiple>
+                                <button onclick="uploadDatabase()" class="upload-btn">📁 Загрузить базу</button>
+                                <div class="upload-info">
+                                    <small>Поддерживаются форматы: JSON, CSV, TXT</small>
+                                </div>
+                            </div>
+                            <div class="database-list" id="database-list">
+                                <div class="no-databases">Нет загруженных баз данных</div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-card">
+                            <div class="settings-header">
+                                <h3>🔔 Уведомления</h3>
+                                <p>Настройки оповещений</p>
+                            </div>
+                            <div class="setting-item">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Звуковые уведомления</span>
+                            </div>
+                            <div class="setting-item">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Email уведомления</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tool Results Area -->
+                <div id="results-area" class="results-area" style="display: none;">
+                    <div class="results-header">
+                        <button class="back-button" data-section="tools">← Вернуться к инструментам</button>
+                        <h2>Результаты анализа</h2>
+                    </div>
+                    <div class="results-content">
+                        <div class="placeholder-text">
+                            Выберите инструмент для начала работы
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

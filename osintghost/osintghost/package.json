@@ -1,0 +1,19 @@
+{
+  "name": "anomaly-osint-tool",
+  "version": "1.0.0",
+  "description": "Anomaly - Advanced OSINT Intelligence Tool",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["osint", "intelligence", "security", "investigation"],
+  "author": "Amalya @cluim, Шёпот @oxaul",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "path": "^0.12.7"
+  }
+}
